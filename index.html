@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOBANG</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="col-1-nav">
+                <h1>TOBANG</h1>
+            </div>
+            <div class="col-2-nav">
+                <ul>
+                    <li><a href="#tentang-kami">Tentang Kami</a></li>
+                    <li><a href="#kontak-tb">Kontak</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tentang-kami">
+            <div class="img-tentang-kami">
+                <img src="image/pexels-pok.jpg" alt="">
+            </div>
+            <div class="teks-tentang-kami hidden-js2">
+                <h1 class="">TOBANG</h1>
+                <p>"Tobanglah kemano kan di tuju,<br> tapi ingek jan sampai jadi kacang lupo kulik nyo"</p>
+                <a href="#tentang-kami">
+                    <button class="button">
+                        <span class="button_lg">
+                            <span class="button_sl"></span>
+                            <span class="button_text">Tentang Kami</span>
+                        </span>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="tentang-kami-penjelasan">
+            <div class="penjelasan-1 hidden-js">
+                <img src="image/pexels-stein.jpg" alt="">
+            </div>
+            <div class="penjelasan-2 hidden-js3" id="tentang-kami">
+                <article>
+                    <h1>TENTANG KAMI</h1>
+                    <p>Tobang adalah perusahaan yang bergerak pada bidang pariwisata yang memberikan layanan
+                        kemudahan bagi orang orang yang ingin pergi berliburan. Tobang sudah ada sejak 2021, dengan
+                        perjalanan yang sudah sangat panjang, Tobang akan memberikan kenyamanan dalam berliburan serta
+                        kemudahan akses ke semua tujuan. percayakan liburan anda kepada Tobang, anda akan segera Terbang
+                    </p>
+                    <a href="#kenapa-tb">
+                        <button class="button">
+                            <span class="button_lg">
+                                <span class="button_sl"></span>
+                                <span class="button_text">Kenapa Harus Tobang</span>
+                            </span>
+                        </button>
+                    </a>
+                </article>
+            </div>
+        </div>
+        <div class="kenapa-tobang" id="kenapa-tb">
+            <h1>KENAPA HARUS TOBANG ??</h1>
+            <div class="tobang-card">
+                <div class="card hidden-js2">
+                    <div class="card-teks">
+                        <h3>PENERBANGAN MURAH</h3>
+                    </div>
+                    <div class="card-img">
+                        <img src="image/pexels-pixabay.jpg" alt="">
+                    </div>   
+                </div>
+                <div class="card hidden-js2">
+                    <div class="card-teks">
+                        <h3>PENGINAPAN BINTANG 5</h3>
+                    </div>
+                    <div class="card-img">
+                        <img src="image/pexels-pixabay2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="card hidden-js2">
+                    <div class="card-teks">
+                        <h3>REKOMENDASI TEMPAT LIBURAN</h3>
+                    </div>
+                    <div class="card-img">
+                        <img src="image/pexels-maxim.jpg" alt="">
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="kontak" id="kontak-tb">
+            <div class="penjelasan-kontak hidden-js">
+                <article>
+                    <h1>KONTAK TOBANG</h1>
+                    <p>wujudkan liburan impianmu sekarang juga, jangan ragu jangan bimbang, hubungi Tobang kita terbang
+                    </p>
+                    <a href="">
+                        <button class="button">
+                             <span class="button_lg">
+                                 <span class="button_sl"></span>
+                                <span class="button_text">Hubungi Tobang</span>
+                             </span>
+                        </button>
+                    </a>
+                </article>
+            </div>
+            <aside class="as hidden-js2">
+                <div class="poster">
+                    <div class="poster-img">
+                        <img src="image/pexels-marlon.jpg" alt="">   
+                    </div>
+                    
+                    <div class="poster-teks">
+                        <h1>TOBANG</h1>
+                        <p>"make your dream's come true</p>
+                    </div>
+                </div> 
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-brand">
+              <h1>TOBANG</h1>
+            </div>
+            <div class="footer-text">
+              <p>Tobang hadir untuk mewujudkan liburan impian anda, bersama Tobang liburan anda akan berjalan lancar dan nyaman,
+                tunggu apalagi, mari bergabung bersama Tobang, dan jangan lupa, dengan Tobang anda akan segera terbang
+              </p>
+            </div>
+            <div class="line"></div>
+            <div class="copyright"><p>© 2023 TOBANG. All rights reserved</p></div>
+          </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries)=>{
+            entries.forEach((entry)=>{
+                console.log(entry)
+                if(entry.isIntersecting){
+                    entry.target.classList.add('show-js');
+                }
+            });
+        });
+
+        const observer2 = new IntersectionObserver((entries)=>{
+            entries.forEach((entry)=>{
+                console.log(entry)
+                if(entry.isIntersecting){
+                    entry.target.classList.add('show-js2');
+                }
+            });
+        });
+
+        const observer3 = new IntersectionObserver((entries)=>{
+            entries.forEach((entry)=>{
+                console.log(entry)
+                if(entry.isIntersecting){
+                    entry.target.classList.add('show-js3');
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll('.hidden-js');
+        hiddenElements.forEach((el)=> observer.observe(el));
+
+        const hiddenElements2 = document.querySelectorAll('.hidden-js2');
+        hiddenElements2.forEach((el)=> observer2.observe(el));
+
+        const hiddenElements3 = document.querySelectorAll('.hidden-js3');
+        hiddenElements3.forEach((el)=> observer3.observe(el));
+          
+    </script>
+</body>
+</html>
